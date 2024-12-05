@@ -1,0 +1,40 @@
+PRE
+threads:8
+STD-H
+-leg
+-ca /home/s8namuel/rare/master/fcn.py
+STD-E
+-rs
+-n
+-pss
+-nr -20
+-pr 100
+-sr 0
+-mrv 5
+-le 100
+-ne 100000
+-es 1
+-ee 0.05
+-ed 0.999
+-bfs 100000000
+-bs 512
+-g 0.99
+-t 0.001
+-ue 4
+-nnf fcn
+-nnw 15 64 64 9
+-pef 10000
+-gpu
+-gid 4
+-eseps 4
+-eskap 0.05
+-esir 10
+-esp 10000
+-esl 10000
+-est 8
+-esmp 0.2
+-lr 8e-4
+-exp /home/s8namuel/rare/rt_rareid_ret
+--benchmark racetrack
+EXEC
+[[python3.9, /home/s8namuel/rare/master/learn_rareid.py, maze, -s 2, -np 0.25, --relevance_heuristic novelty, --reduction_strategy cluster],[]]

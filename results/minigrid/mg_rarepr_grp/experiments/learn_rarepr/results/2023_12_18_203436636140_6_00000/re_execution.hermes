@@ -1,0 +1,44 @@
+PRE
+threads: 6
+STD-H
+-leg
+-ca /home/s8namuel/rare/master/fcn.py
+STD-E
+-rs
+-n
+-pss
+-nr -1
+-pr 1
+-sr 0
+-mrv 5
+-le 200
+-ne 40000
+-es 1
+-ee 0.05
+-ed 0.999
+-bfs 100000000
+-bs 512
+-g 0.99
+-t 0.001
+-ue 4
+-nnf fcn
+-nnw 388 128 128 4
+-pef 10000
+-gpu
+-gid 4
+-eseps 0.05
+-eskap 0.05
+-esir 10
+-esp 500
+-esl 3000
+-est 8
+-esmp 0.2
+-lr 0.0001
+-esg
+-exp /home/s8namuel/rare/mg_rarepr_grp
+--benchmark minigrid
+--psi_max 0.5
+--archive_size_factor 0.5
+--print_heatmaps
+EXEC
+[[python3.9, /home/s8namuel/rare/master/learn_rarepr.py, DynObsDoor, -s 43, --num_obstacles 6, --relevance_heuristic novelty, --reduction_strategy cluster],[]]

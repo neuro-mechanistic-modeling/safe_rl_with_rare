@@ -1,0 +1,17 @@
+name: safe_rl_with_rare
+channels:
+  - conda-forge
+dependencies:
+  - python==3.9
+  - pip
+  - pytorch==1.9.0
+  - pandas==1.4.3
+  - tqdm==4.66.1
+  - toml==0.10.2
+  - matplotlib==3.5.2
+  - pip:
+      - notebook==6.5.6
+      - Minigrid==2.1.0
+      - racetrackgym==0.2.3
+      - scipy==1.9.0
+      - .\

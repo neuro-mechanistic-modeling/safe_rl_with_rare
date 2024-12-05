@@ -1,0 +1,43 @@
+PRE
+threads: 6
+STD-H
+-leg
+-ca fcn.py
+STD-E
+-rs
+-n
+-pss
+-nr -1
+-pr 1
+-sr 0
+-mrv 5
+-le 200
+-ne 40000
+-es 1
+-ee 0.05
+-ed 0.999
+-bfs 100000000
+-bs 512
+-g 0.99
+-t 0.001
+-ue 4
+-nnf fcn
+-nnw 388 128 128 4
+-pef 10000
+-gpu
+-gid 4
+-eseps 0.05
+-eskap 0.05
+-esir 10
+-esp 500
+-esl 3000
+-est 8
+-esmp 0.2
+-lr 0.0001
+-esg
+-exp /Users/nicola_mueller/Desktop/experiments
+--benchmark minigrid
+--psi_max 0.5
+--archive_size_factor 0.5
+EXEC
+PROD([[python3, learn_rareid.py, {map}, -s {s}, --num_obstacles {no}, --relevance_heuristic {rh}, --reduction_strategy {ar}],[]],  map=[DynObsDoor], s=[0,1,2], no=[6], rh=[value, novelty], ar=[cluster, maximal_distance])
