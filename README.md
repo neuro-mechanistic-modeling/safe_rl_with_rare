@@ -1,7 +1,22 @@
 # Safe Reinforcement Learning Through Regret and State Restorations in Evaluation Stages.
 ### Timo P. Gros, Nicola Josef Müller, Daniel Höller, and Verena Wolf (2024).
 
-<img src="RARE.png" alt="RARE" width="600"/>
+<img src="RARE.png" alt="RARE" width="500"/>
+
+In a nutshell, RARE collects interesting states during training and evaluates the agent's room for improvement regarding safety.
+Then, RARE focuses the agent's training on the states where safety can be improved the most. 
+
+In the example figure below, you can see different agents trained on the Maze map of the Racetrack environment, where the goal is to drive from the purple cells to the green ones.
+
+<img src="RARE_exploration.png" alt="RARE_exploration" width="800"/>
+
+The heatmaps show how often each cell was visited during training. We make the following observations:
+- The agent using the standard DQN algorithm struggles to reach the goal line. 
+- The agent using Go-Explore, a popular exploration algorithm, explores the Maze uniformly, without focusing on the goal.
+- The RARE agent balances exploration and exploitation, focusing on reaching the goal while exploring the areas where it is likely to crash.
+
+We show on the popular Racetrack and MiniGrid benchmarks, that RARE can train agents that achieve fewer safety violations and higher returns than existing algorithms.
+
 
 # Documentation
 This is the official implementation of the RARE algorithm from the paper ["Safe Reinforcement Learning Through Regret and State Restorations in Evaluation Stages"](http://fai.cs.uni-saarland.de/gros/papers/icaps24-RDDPS.pdf) by Timo P. Gros, Nicola Josef Müller, Daniel Höller, and Verena Wolf (2024).

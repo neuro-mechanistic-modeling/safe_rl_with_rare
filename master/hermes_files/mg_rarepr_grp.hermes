@@ -35,7 +35,6 @@ STD-E
 -esmp 0.2
 -lr 0.0001
 -esg
--exp /Users/nicola_mueller/Desktop/experiments
 --benchmark minigrid
 --psi_max 0.5
 --archive_size_factor 0.5

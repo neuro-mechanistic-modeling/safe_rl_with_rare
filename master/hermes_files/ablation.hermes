@@ -35,7 +35,6 @@ STD-E
 -esmp 0.2
 -lr 8e-4
 -esg
--exp /Users/nicola_mueller/Desktop/experiments
 --benchmark racetrack
 --no_regret
 EXEC

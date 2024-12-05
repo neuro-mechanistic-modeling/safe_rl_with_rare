@@ -34,7 +34,6 @@ STD-E
 -est 8
 -esmp 0.2
 -esg
--exp /Users/nicola_mueller/Desktop/experiments
 --benchmark minigrid
 EXEC
 PROD([[python3, learn_dqn.py, {map}, -s {s}, --num_obstacles {no}, -lr {learn}],[]], map=[DynObsDoor], s=[0,1,2], no=[6], learn=[0.0001])

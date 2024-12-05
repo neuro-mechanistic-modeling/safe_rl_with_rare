@@ -35,7 +35,6 @@ STD-E
 -esmp 0.2
 -lr 8e-4
 -esg
--exp /Users/nicola_mueller/Desktop/experiments
 --benchmark racetrack
 EXEC
 PROD([[python3, learn_rareid.py, {map}, -s {s}, -np 0.25, --relevance_heuristic {rh}, --reduction_strategy {ar}],[]],  map=[maze_extended], s=[0,1,2], rh=[value, novelty], ar=[cluster, maximal_distance])
