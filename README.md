@@ -1,6 +1,8 @@
 # Safe Reinforcement Learning Through Regret and State Restorations in Evaluation Stages.
 ### Timo P. Gros, Nicola Josef Müller, Daniel Höller, and Verena Wolf (2024).
 
+This is the official implementation of the RARE algorithm from the paper ["Safe Reinforcement Learning Through Regret and State Restorations in Evaluation Stages"](http://fai.cs.uni-saarland.de/gros/papers/icaps24-RDDPS.pdf).
+
 <img src="RARE.png" alt="RARE" width="500"/>
 
 In a nutshell, RARE collects interesting states during training and evaluates the agent's room for improvement regarding safety.
@@ -19,7 +21,6 @@ We show on the popular Racetrack and MiniGrid benchmarks, that RARE can train ag
 
 
 # Documentation
-This is the official implementation of the RARE algorithm from the paper ["Safe Reinforcement Learning Through Regret and State Restorations in Evaluation Stages"](http://fai.cs.uni-saarland.de/gros/papers/icaps24-RDDPS.pdf) by Timo P. Gros, Nicola Josef Müller, Daniel Höller, and Verena Wolf (2024).
 
 ## Python Environment
 
